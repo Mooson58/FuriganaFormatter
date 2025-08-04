@@ -18,6 +18,10 @@ If you're just starting to learn Japanese and struggle with kanji, this tool can
 - Desktop application built with [Electron](https://www.electronjs.org/)
 - Works on Windows, macOS, and Linux
 
+## Download
+
+- https://github.com/Mooson58/FuriganaFormatter/releases/tag/v1.0.0
+
 ## Screenshot
 
 ![Preview](./example/example1.png)
