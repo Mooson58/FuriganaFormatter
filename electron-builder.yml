@@ -8,6 +8,11 @@ files:
   - '!electron.vite.config.{js,ts,mjs,cjs}'
   - '!{.eslintcache,eslint.config.mjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
   - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
+  - dist/**         # 仅包含 vite 构建后的产物
+  - resources/**    # 自定义资源
+  - main.js         # Electron 主进程入口
+  - preload.js      # 预加载脚本（如使用）
+  - '!**/*.map'     # 去除 source map（仅限生产）
 asarUnpack:
   - resources/**
 win:
@@ -42,5 +47,3 @@ npmRebuild: false
 publish:
   provider: generic
   url: https://example.com/auto-updates
-electronDownload:
-  mirror: https://npmmirror.com/mirrors/electron/

@@ -20,11 +20,11 @@ If you're just starting to learn Japanese and struggle with kanji, this tool can
 
 ## Screenshot
 
-![Preview](./resources/example1.png)
+![Preview](./example/example1.png)
 
-![Preview](./resources/example2.png)
+![Preview](./example/example2.png)
 
-![Preview](./resources/example3.png)
+![Preview](./example/example3.png)
 
 ## License
 
