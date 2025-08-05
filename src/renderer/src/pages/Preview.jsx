@@ -16,6 +16,15 @@ function Preview() {
             const card = document.getElementById('card-content')
             card.innerHTML = store.content
         }
+        const background = localStorage.getItem('background') || '#000'
+        const fontSize = localStorage.getItem('fontSize')   || 16
+        const color = localStorage.getItem('color') || '#fff'
+        const letterSpacing = localStorage.getItem('letterSpacing') || 0
+        store.setBackground(background)
+        store.setFontSize(fontSize)
+        store.setColor(color)
+        store.setLetterSpacing(letterSpacing)
+
     }, [])
 
     useEffect(() => {
@@ -50,6 +59,13 @@ function Preview() {
         await window.api.toImage(imageBase64)
     }
 
+    const saveStyle = () => {
+        localStorage.setItem('background', store.background)
+        localStorage.setItem('fontSize', store.fontSize)
+        localStorage.setItem('color', store.color)
+        localStorage.setItem('letterSpacing', store.letterSpacing)
+    }
+
     return (
         <>
             <div className="bg">
@@ -70,22 +86,23 @@ function Preview() {
                     </div>
                     <div className="sidebar-content">
                         <div className="tools-wrapper">
-                            <div style={{ marginBottom: 30 }} className="flex justify-between items-center">
-                                <Button onClick={() => store.setPage(0)}>back</Button>
-                                <Button onClick={preview}>preview</Button>
-                            </div>
                             <div className="flex justify-between items-center">
                                 Background Color：<input value={store.background} onChange={e => store.setBackground(e.target.value)} type="color" />
                             </div>
                             <div className="flex justify-between items-center">
                                 Font Size：<input min={12} max={36} step={1} value={store.fontSize} onChange={e => store.setFontSize(parseInt(e.target.value))} type="range" />
+                                {store.fontSize}
                             </div>
                             <div className="flex justify-between items-center">
                                 Font Color：<input value={store.color} onChange={e => store.setColor(e.target.value)} type="color" />
                             </div>
                             <div className="flex justify-between items-center">
                                 Spacing：<input min={0} max={10} step={1} value={store.letterSpacing} onChange={e => store.setLetterSpacing(parseInt(e.target.value))} type="range" />
+                                {store.letterSpacing}
                             </div>
+                            <Button onClick={() => store.setPage(0)}>back</Button>
+                            <Button onClick={preview}>preview</Button>
+                            <Button onClick={saveStyle}>Save TextStyle</Button>
                         </div>
                     </div>
                 </div>

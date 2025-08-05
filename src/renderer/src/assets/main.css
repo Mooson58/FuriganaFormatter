@@ -65,7 +65,7 @@ body {
   flex: 1;
   height: 90%;
   margin: 0 30px;
-  padding: 10px;
+  padding: 15px 20px;
 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
     0 1px 3px rgba(0, 0, 0, 0.08);
@@ -154,6 +154,7 @@ body {
 }
 
 .sidebar-content {
+  height: 100%;
   padding: 20px;
   overflow: auto;
 }
@@ -164,6 +165,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  justify-content: center;
   font-size: 14px;
 }
 
