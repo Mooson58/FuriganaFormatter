@@ -20,7 +20,7 @@ If you're just starting to learn Japanese and struggle with kanji, this tool can
 
 ## Download
 
-- https://github.com/Mooson58/FuriganaFormatter/releases/tag/v1.0.0
+- https://github.com/Mooson58/FuriganaFormatter/tags
 
 ## Screenshot
 
